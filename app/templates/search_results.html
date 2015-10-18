@@ -1,0 +1,8 @@
+<h1>Search results for "{{ query }}":</h1>
+{% for post in results %}
+    <div><p>{{ post._source.name }}</p></div>
+    <b>Films</b>
+    {% for film in post._source.films %}
+        <div><p>{{ film }}</p></div>
+    {% endfor %}
+{% endfor %}
