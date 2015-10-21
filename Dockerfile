@@ -13,7 +13,5 @@ WORKDIR /search
 ADD . /search
 RUN pip install -r /search/requirements.txt
 
-COPY ./appdynamics.cfg /etc/appdynamics.cfg
-
 EXPOSE 5000
 CMD /env/bin/python run.py
