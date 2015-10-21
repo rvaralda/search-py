@@ -14,4 +14,4 @@ ADD . /search
 RUN pip install -r /search/requirements.txt
 
 EXPOSE 5000
-CMD /env/bin/python run.py
+ENTRYPOINT [ "gunicorn", "-w", "8", "-b", "0.0.0.0:5000", "app:app" ]
